@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Products - LMJ Consulting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- PAYPAL PART 1 -->
+    <script src="https://www.paypal.com/sdk/js?client-id=BAACUb_dHhHk81vHWyy_yIjkZ7Hnj35AxGKb6doc89dFYypVmy_kGUYP-xwULUTT1sbme1-x1ztaWT1WZo&components=hosted-buttons&enable-funding=venmo&currency=USD"> </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --ink: #1A1814;
+            --paper: #F4EFE6;
+            --accent: #8B2F1F;
+            --gold: #A8895C;
+            --green: #2D6A4F;
+        }
+        
+        body {
+            font-family: 'Inter Tight', sans-serif;
+            background-color: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--accent);
+            color: var(--paper);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-family: 'Fraunces', serif;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 80px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .intro h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        
+        .intro p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .tiers-wrapper {
+            display: grid;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+        
+        .tier-section {
+            margin-bottom: 40px;
+        }
+        
+        .tier-title {
+            font-family: 'Fraunces', serif;
+            font-size: 28px;
+            color: var(--accent);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border: 2px solid var(--gold);
+            padding: 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(139, 47, 31, 0.15);
+        }
+        
+        .product-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .product-card p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .product-contents {
+            background-color: var(--paper);
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        
+        .product-contents ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        .product-contents li:before {
+            content: "✓ ";
+            color: var(--green);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .product-price {
+            font-family: 'Fraunces', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .paypal-button {
+            margin-top: 15px;
+        }
+        
+        .tier-description {
+            background-color: rgba(139, 47, 31, 0.05);
+            padding: 20px;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        
+        .tier-description p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        footer {
+            background-color: var(--ink);
+            color: var(--paper);
+            padding: 40px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 80px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            margin-top: 15px;
+        }
+        
+        .footer-links a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Digital Products</h1>
+        <p>AI Prompts Built by a CFO Who's Actually Done the Work</p>
+    </header>
+    
+    <div class="container">
+        <div class="intro">
+            <h2>Choose Your Package</h2>
+            <p>Get access to battle-tested AI prompts designed for your role. All products are delivered as PDF files—download instantly, use forever.</p>
+        </div>
+        
+        <div class="tiers-wrapper">
+            <!-- TIER 1: INDIVIDUAL PACKS -->
+            <div class="tier-section">
+                <h2 class="tier-title">Tier 1: Individual Packs</h2>
+                <div class="tier-description">
+                    <p><strong>$29 each</strong> — One-time purchase. Select any single prompt pack and own it forever. Perfect for getting started or diving deep into your specific role.</p>
+                </div>
+                
+                <div class="products-grid">
+                    <!-- Finance Controller -->
+                    <div class="product-card">
+                        <h3>Finance Controller</h3>
+                        <p>For Finance Controllers & CFOs</p>
+                        <div class="product-contents">
+                            <ul>
+                                <li>Month-End & Close</li>
+                                <li>Financial Analysis</li>
+                                <li>Accounting Tasks</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$29</div>
+                        <div class="paypal-button">
+                            <div id="paypal-container-YJSC53D6GGRPN"></div>
+                            <script>
+                                paypal.HostedButtons({
+                                    hostedButtonId: "YJSC53D6GGRPN",
+                                }).render("#paypal-container-YJSC53D6GGRPN")
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <!-- Bookkeeper -->
+                    <div class="product-card">
+                        <h3>Bookkeeper & Ops</h3>
+                        <p>For Solo Bookkeepers & Operations Teams</p>
+                        <div class="product-contents">
+                            <ul>
+                                <li>Transaction Coding</li>
+                                <li>Reconciliations</li>
+                                <li>AP/AR & Payroll</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$29</div>
+                        <div class="paypal-button">
+                            <div id="paypal-container-WF2Z8H525ZPZG"></div>
+                            <script>
+                                paypal.HostedButtons({
+                                    hostedButtonId: "WF2Z8H525ZPZG",
+                                }).render("#paypal-container-WF2Z8H525ZPZG")
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <!-- CFO Strategic -->
+                    <div class="product-card">
+                        <h3>CFO Strategic Finance</h3>
+                        <p>For Finance Managers & Finance Leaders</p>
+                        <div class="product-contents">
+                            <ul>
+                                <li>Financial Forecasting</li>
+                                <li>Strategic Analysis</li>
+                                <li>Board Reporting</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$29</div>
+                        <div class="paypal-button">
+                            <div id="paypal-container-NVBXEXDF974ME"></div>
+                            <script>
+                                paypal.HostedButtons({
+                                    hostedButtonId: "NVBXEXDF974ME",
+                                }).render("#paypal-container-NVBXEXDF974ME")
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <!-- Tax -->
+                    <div class="product-card">
+                        <h3>Tax Prep & Planning</h3>
+                        <p>For Tax Professionals & CPAs</p>
+                        <div class="product-contents">
+                            <ul>
+                                <li>Tax Planning</li>
+                                <li>Deduction Optimization</li>
+                                <li>Compliance</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$29</div>
+                        <div class="paypal-button">
+                            <div id="paypal-container-Z5T9FYFASVFYE"></div>
+                            <script>
+                                paypal.HostedButtons({
+                                    hostedButtonId: "Z5T9FYFASVFYE",
+                                }).render("#paypal-container-Z5T9FYFASVFYE")
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <!-- FP&A -->
+                    <div class="product-card">
+                        <h3>FP&A Analyst</h3>
+                        <p>For Budget Analysts & Financial Planners</p>
+                        <div class="product-contents">
+                            <ul>
+                                <li>Budget Modeling</li>
+                                <li>Performance Analysis</li>
+                                <li>Scenario Planning</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$29</div>
+                        <div class="paypal-button">
+                            <div id="paypal-container-P8TC5ZDD4BA4W"></div>
+                            <script>
+                                paypal.HostedButtons({
+                                    hostedButtonId: "P8TC5ZDD4BA4W",
+                                }).render("#paypal-container-P8TC5ZDD4BA4W")
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <!-- Startup -->
+                    <div class="product-card">
+                        <h3>Startup Finance Ops</h3>
+                        <p>For Founders & Startup CFOs</p>
+                        <div class="product-contents">
+                            <ul>
+                                <li>Metrics & Dashboards</li>
+                                <li>Funding & Cap Table</li>
+                                <li>Cash Management</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$29</div>
+                        <div class="paypal-button">
+                            <div id="paypal-container-XFFJF8LM94C5Y"></div>
+                            <script>
+                                paypal.HostedButtons({
+                                    hostedButtonId: "XFFJF8LM94C5Y",
+                                }).render("#paypal-container-XFFJF8LM94C5Y")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- TIER 2: BUNDLES -->
+            <div class="tier-section">
+                <h2 class="tier-title">Tier 2: Curated Bundles</h2>
+                <div class="tier-description">
+                    <p><strong>$49 each</strong> — Two complementary packs together. Get multiple perspectives on related topics, save $9, and build a more complete toolkit.</p>
+                </div>
+                
+                <div class="products-grid">
+                    <!-- Controller's Essentials -->
+                    <div class="product-card">
+                        <h3>Controller's Essentials</h3>
+                        <p>For All Accounting Roles</p>
+                        <div class="product-contents">
+                            <ul>
+                                <li>Finance Controller Pack</li>
+                                <li>Bookkeeper & Ops Pack</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$49</div>
+                        <div class="paypal-button">
+                            <div id="paypal-container-8T5HCTTN4A6KC"></div>
+                            <script>
+                                paypal.HostedButtons({
+                                    hostedButtonId: "8T5HCTTN4A6KC",
+                                }).render("#paypal-container-8T5HCTTN4A6KC")
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <!-- Finance Leadership -->
+                    <div class="product-card">
+                        <h3>Finance Leadership</h3>
+                        <p>For Finance Managers & Leaders</p>
+                        <div class="product-contents">
+                            <ul>
+                                <li>CFO Strategic Finance Pack</li>
+                                <li>Tax Prep & Planning Pack</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$49</div>
+                        <div class="paypal-button">
+                            <div id="paypal-container-CF9N4DCCN3UPJ"></div>
+                            <script>
+                                paypal.HostedButtons({
+                                    hostedButtonId: "CF9N4DCCN3UPJ",
+                                }).render("#paypal-container-CF9N4DCCN3UPJ")
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <!-- Analyst's Toolkit -->
+                    <div class="product-card">
+                        <h3>Analyst's Toolkit</h3>
+                        <p>For Analysts & Operations Teams</p>
+                        <div class="product-contents">
+                            <ul>
+                                <li>FP&A Analyst Pack</li>
+                                <li>Startup Finance Ops Pack</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$49</div>
+                        <div class="paypal-button">
+                            <div id="paypal-container-YT8855L85VDSL"></div>
+                            <script>
+                                paypal.HostedButtons({
+                                    hostedButtonId: "YT8855L85VDSL",
+                                }).render("#paypal-container-YT8855L85VDSL")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- TIER 3: COMPLETE LIBRARY -->
+            <div class="tier-section">
+                <h2 class="tier-title">Tier 3: Complete Library</h2>
+                <div class="tier-description">
+                    <p><strong>$99 one-time</strong> — All 6 packs. The entire FinanceFlow AI library. Best value. Build a complete reference library for your entire team.</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card" style="grid-column: span 1; max-width: 350px; margin: 0 auto;">
+                        <h3>Complete Library</h3>
+                        <p>All 6 Prompt Packs</p>
+                        <div class="product-contents">
+                            <ul>
+                                <li>Finance Controller</li>
+                                <li>Bookkeeper & Ops</li>
+                                <li>CFO Strategic Finance</li>
+                                <li>Tax Prep & Planning</li>
+                                <li>FP&A Analyst</li>
+                                <li>Startup Finance Ops</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">$99</div>
+                        <div class="paypal-button">
+                            <div id="paypal-container-8LEHJC3ZU7RWN"></div>
+                            <script>
+                                paypal.HostedButtons({
+                                    hostedButtonId: "8LEHJC3ZU7RWN",
+                                }).render("#paypal-container-8LEHJC3ZU7RWN")
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 80px; padding-top: 60px; border-top: 2px solid var(--gold);">
+            <h3 style="font-family: 'Fraunces', serif; color: var(--accent); margin-bottom: 15px;">Questions?</h3>
+            <p>All products are delivered as PDF files—instant download, lifetime access. No subscriptions. No recurring fees.</p>
+            <p style="margin-top: 15px; color: #666;"><a href="mailto:leonard@lmjcfo.com" style="color: var(--accent); text-decoration: none;">Contact Leonard</a> with any questions.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 LMJ Consulting. All rights reserved.</p>
+        <p>Leonard Morganis — Fractional CFO | Greater Boston Area, MA</p>
+        <div class="footer-links">
+            <a href="https://lmjcfo.com">Home</a>
+            <a href="https://linkedin.com/in/leonardmorganis">LinkedIn</a>
+            <a href="mailto:leonard@lmjcfo.com">Email</a>
+        </div>
+    </footer>
+</body>
+</html>
