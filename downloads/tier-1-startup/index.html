@@ -3,217 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startup Finance Ops Pack - LMJ Consulting</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Startup Finance Ops Pack - Download</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --ink: #1A1814;
-            --paper: #F4EFE6;
-            --accent: #8B2F1F;
-            --gold: #A8895C;
-            --green: #2D6A4F;
-        }
-        
-        body {
-            font-family: 'Inter Tight', sans-serif;
-            background-color: var(--paper);
-            color: var(--ink);
-            line-height: 1.6;
-        }
-        
-        header {
-            background-color: var(--accent);
-            color: var(--paper);
-            padding: 60px 40px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-family: 'Fraunces', serif;
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 16px;
-            opacity: 0.95;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 40px;
-        }
-        
-        .success-message {
-            background-color: rgba(45, 106, 79, 0.1);
-            border: 2px solid var(--green);
-            padding: 30px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        
-        .success-message h2 {
-            font-family: 'Fraunces', serif;
-            color: var(--green);
-            margin-bottom: 10px;
-            font-size: 24px;
-        }
-        
-        .success-message p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        .files-section {
-            margin-bottom: 50px;
-        }
-        
-        .files-section h3 {
-            font-family: 'Fraunces', serif;
-            color: var(--accent);
-            margin-bottom: 20px;
-            font-size: 22px;
-        }
-        
-        .file-list {
-            list-style: none;
-        }
-        
-        .file-item {
-            background: white;
-            border: 1px solid var(--gold);
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-        
-        .file-item:hover {
-            border-color: var(--accent);
-            box-shadow: 0 2px 8px rgba(139, 47, 31, 0.15);
-        }
-        
-        .file-name {
-            font-weight: 600;
-            color: var(--ink);
-        }
-        
-        .download-btn {
-            background-color: var(--accent);
-            color: white;
-            padding: 10px 25px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-        
-        .download-btn:hover {
-            background-color: #6b1f1a;
-        }
-        
-        .info-section {
-            background-color: rgba(139, 47, 31, 0.05);
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 40px;
-            border-left: 4px solid var(--accent);
-        }
-        
-        .info-section h3 {
-            font-family: 'Fraunces', serif;
-            color: var(--accent);
-            margin-bottom: 15px;
-        }
-        
-        .info-section p {
-            font-size: 14px;
-            margin-bottom: 10px;
-            line-height: 1.8;
-        }
-        
-        .back-link {
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .back-link a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .back-link a:hover {
-            text-decoration: underline;
-        }
-        
-        footer {
-            background-color: var(--ink);
-            color: var(--paper);
-            padding: 40px;
-            text-align: center;
-            font-size: 14px;
-            margin-top: 80px;
-        }
-    }
+        :root { --ink: #1A1814; --paper: #F4EFE6; --accent: #8B2F1F; --gold: #A8895C; --green: #2D6A4F; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background-color: var(--paper); color: var(--ink); line-height: 1.6; }
+        .success-banner { background-color: var(--accent); color: white; padding: 2rem; text-align: center; border-bottom: 3px solid var(--gold); }
+        .success-banner h1 { font-family: 'Fraunces', serif; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+        .welcome-box { background: white; border: 2px solid var(--accent); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; text-align: center; }
+        .welcome-box h2 { font-family: 'Fraunces', serif; color: var(--green); font-size: 1.8rem; margin-bottom: 1rem; }
+        .files-section { background: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
+        .files-section h3 { display: flex; align-items: center; font-family: 'Fraunces', serif; color: var(--ink); font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .files-section h3::before { content: "📁"; margin-right: 0.5rem; font-size: 1.8rem; }
+        .file-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 1rem; }
+        .file-item:last-child { margin-bottom: 0; }
+        .download-btn { background-color: var(--accent); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; }
+        .download-btn:hover { background-color: var(--gold); }
+        .instructions { background-color: #f9f5f0; border-left: 4px solid var(--accent); padding: 1.5rem; margin-bottom: 2rem; border-radius: 4px; }
+        .instructions h3 { font-family: 'Fraunces', serif; color: var(--accent); margin-bottom: 1rem; }
+        .instructions ul { margin-left: 1.5rem; }
+        .instructions li { margin-bottom: 0.5rem; }
+        footer { background-color: var(--ink); color: var(--paper); text-align: center; padding: 2rem 1rem; margin-top: 3rem; border-top: 3px solid var(--accent); }
+        footer a { color: var(--gold); text-decoration: none; }
     </style>
 </head>
 <body>
-    <header>
+    <div class="success-banner">
         <h1>✓ Thank You!</h1>
         <p>Your download is ready</p>
-    </header>
-    
+    </div>
     <div class="container">
-        <div class="success-message">
+        <div class="welcome-box">
             <h2>Welcome to Startup Finance Ops Pack</h2>
-            <p>You now have access to 25 AI Prompts for Founders, Startup CFOs & Early-Stage Finance Teams</p>
-            <p style="font-size: 14px;">All files are PDFs—open them on any device, anytime.</p>
+            <p>25 AI Prompts for startup metrics, fundraising, and cash management.</p>
+            <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">All files are PDFs—open them on any device, anytime.</p>
         </div>
-        
         <div class="files-section">
-            <h3>📥 Your Files</h3>
-            <ul class="file-list">
-                <li class="file-item">
-                    <span class="file-name">Startup Finance Ops Pack</span>
-                    <a href="/downloads/packs/Startup_Finance_Ops_Pack_LMJ_Branded.pdf" class="download-btn">Download PDF</a>
-                </li>
+            <h3>Your Files</h3>
+                        <div class="file-item">
+                <span>Startup Finance Ops Pack</span>
+                <a href="https://lmjcfo.lmorganis.workers.dev/downloads/packs/Startup%20Finance%20Ops%20Pack_LMJ_Branded.pdf" class="download-btn">Download PDF</a>
+            </div>
+
+        </div>
+        <div class="instructions">
+            <h3>How to Use Your Prompts</h3>
+            <ul>
+                <li><strong>Copy & Paste:</strong> Open any PDF, copy a prompt, and paste it into Claude, ChatGPT, or your preferred AI tool.</li>
+                <li><strong>Customize:</strong> The prompts are templates—fill in your specific numbers, account names, and business details.</li>
+                <li><strong>Reuse:</strong> Save your customized versions. Build your own prompt library over time.</li>
             </ul>
         </div>
-        
-        <div class="info-section">
-            <h3>How to Use Your Prompts</h3>
-            <p><strong>Copy & Paste:</strong> Open any PDF, copy a prompt, and paste it into Claude, ChatGPT, or your preferred AI tool.</p>
-            <p><strong>Customize:</strong> The prompts are templates—fill in your specific numbers, account names, and business details.</p>
-            <p><strong>Reuse:</strong> Save your customized versions. Build your own prompt library over time.</p>
-        </div>
-        
-        <div class="info-section" style="background-color: rgba(168, 137, 92, 0.05); border-left-color: var(--gold);">
+        <div class="instructions" style="border-left-color: var(--green);">
             <h3>Have Questions?</h3>
             <p>All products come with lifetime access. No subscriptions. No recurring fees.</p>
-            <p>Questions or feedback? <a href="mailto:leonard@lmjcfo.com" style="color: var(--accent); font-weight: 600;">Email Leonard</a></p>
-        </div>
-        
-        <div class="back-link">
-            <a href="/digital-products/">← Back to Digital Products</a>
+            <p style="margin-top: 1rem;">Questions or feedback? <a href="mailto:leonard@lmjcfo.com" style="color: var(--accent);">Email Leonard</a></p>
         </div>
     </div>
-    
     <footer>
         <p>&copy; 2026 LMJ Consulting. All rights reserved.</p>
-        <p>Leonard Morganis — Fractional CFO | lmjcfo.com</p>
+        <p><a href="https://lmjcfo.com">Back to LMJ Consulting</a></p>
     </footer>
 </body>
 </html>
